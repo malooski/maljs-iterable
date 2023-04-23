@@ -1,4 +1,4 @@
-import { forEach, map, filter, toIt, collect, take, toSet, uniq } from "./index";
+import { forEach, map, filter, toIt, collect, take, toSet, uniq } from "./base";
 
 describe("forEach", () => {
     it("should call the given function for each item in the iterator", () => {

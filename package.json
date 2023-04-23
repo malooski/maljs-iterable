@@ -25,9 +25,11 @@
         "@typescript-eslint/parser": "^5.59.0",
         "@yarnpkg/sdks": "^3.0.0-rc.42",
         "eslint": "^8.39.0",
+        "http-server": "^14.1.1",
         "jest": "^29.5.0",
         "prettier": "^2.8.7",
         "ts-jest": "^29.1.0",
+        "typedoc": "^0.24.5",
         "typescript": "^5.0.4"
     },
     "scripts": {
@@ -36,6 +38,9 @@
         "build:cjs": "tsc -p tsconfig-cjs.json",
         "build:clean": "rm -rf dist",
         "test": "jest",
-        "lint": "eslint . --ext .ts"
+        "lint": "eslint . --ext .ts",
+        "typedoc": "yarn typedoc:gen && yarn typedoc:serve",
+        "typedoc:gen": "typedoc src/index.ts",
+        "typedoc:serve": "http-server ./docs -p 8080"
     }
 }

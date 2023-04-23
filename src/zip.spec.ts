@@ -1,4 +1,4 @@
-import { collect, toIt } from "./index";
+import { collect, toIt } from "./base";
 import { innerZip, zip } from "./zip";
 
 describe("zip", () => {
